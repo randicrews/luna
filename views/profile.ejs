@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <title>luna</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-7s/CzocWKIdgTcTzP8T9naH9J+d3qN/folQWccUBgSTsTpF/lYJwT+LcT40Tf9XO+3Jex3KVmIc+Zm/sJ0zHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/504ea75c01.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Poiret+One&family=Roboto+Slab:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile">
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa-solid fa-moon"></span></h1>
+        <a href="/logout" class="btn btn-default btn-sm">logout</a>
+        <!-- <a href="/unlink/local" class="btn btn-default btn-sm">delete account</a>/ -->
+
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <% if (user.local.email) { %>
+                    <!-- <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p> -->
+
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div> 
+        <div class="col-sm-6">
+          <ul class="dates">
+            <h3>cycle</h3>
+          <% for(var i=0; i<dates.length; i++) {%>
+            <li class="message">
+              <% if (dates[i].context) { %>
+              <span class="context"><%= dates[i].context %></span><br>
+              <% } %>
+              <% if (dates[i].date) { %>
+              <span class="date"><%= dates[i].date %></span><br>
+              <% } %>
+              <% if (dates[i].symptoms) { %>
+              <span><%= dates[i].symptoms %></span><br>
+              <% } %>
+              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+              <span data-id="<%= dates[i]._id %>"><i class="fa fa-edit" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>track</h2>
+        <% if (user.local.email) { %>
+
+          <form action="/dates" method="POST">
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="dateform" required/><br>
+            <input type="radio" id="start" name="context" value="start" required>
+            <label for="start">start</label>
+            <input type="radio" id="end" name="context" value="end" required>
+            <label for="end">end</label> 
+            <input type="radio" id="na" name="context" value='phasing' required>
+            <label for="end">neither</label> <br>
+            <input type="text" name="symp" placeholder="symptoms" required>
+            <button class="btn-default" type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

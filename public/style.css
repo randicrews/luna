@@ -1,0 +1,61 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background: url(img/back.jpg);
+  color: white;
+  font-family: 'Abril Fatface', 'Poiret One', 'Great Vibes', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+li{
+  background-color: rgba(255, 255, 255, 0.146);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+li:hover{
+  background: rgba(255, 255, 255, 0.555);
+}
+
+body.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li.message::marker{
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+div.jumbotron{
+  background: rgba(0, 0, 0, 0.38);
+}
+.jumbotron h1{
+  color: white;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'Great Vibes';
+}
+.btn-default{
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+a.link-offset-2{
+  color: white;
+}
+img{
+  height: 200px;
+}
+.sneaky{
+  display: none;
+}
+
+.fa-edit:hover{
+  color: black;
+}
+.fa-trash:hover{
+  color: black;
+}

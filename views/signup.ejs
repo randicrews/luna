@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>luna</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/504ea75c01.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Poiret+One&family=Roboto+Slab:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-star"></span> Signup <i class="fa-solid fa-star"></i></h1>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/signup" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" name="password" required>
+        </div>
+        <div class="form-group">
+            <label>cycle length</label>
+            <input type="number" min="1" max="20" class="form-control" name="cycleLength">
+        </div>
+
+        <button type="submit" class="btn btn-default btn-lg">Signup</button>
+    </form>
+
+    <hr>
+
+    <p>been here before? <a class="link-offset-2"  href="/login">Login <i class="fa-solid fa-moon"></i></a></p>
+
+</div>
+</div>
+</body>
+</html>
